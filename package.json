@@ -1,0 +1,24 @@
+{
+  "name": "javascript-algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-Frequency-counter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:01": "nodemon 01-Frequency-counters/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josuealmonasi/javascript-algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josuealmonasi/javascript-algorithms/issues"
+  },
+  "homepage": "https://github.com/josuealmonasi/javascript-algorithms#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
