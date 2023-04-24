@@ -2,7 +2,7 @@
 The function should return true if every value in the array has it's corresponding value squared in the second array.
 The frequency of values must be the same*/
 /* O(n) */
-function same(arr1, arr2) {
+function sameRefactored(arr1, arr2) {
   // if the length of the arrays are not the same then return false
   if (arr1.length !== arr2.length) {
     return false
@@ -34,4 +34,4 @@ function same(arr1, arr2) {
   return true // if the loop finishes, return true
 }
 
-module.exports = same
+module.exports = sameRefactored
