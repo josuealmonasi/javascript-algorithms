@@ -16,6 +16,8 @@ function validAnagram(str1, str2) {
     // same as above
     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
   }
+  console.log(frequencyCounter1)
+  console.log(frequencyCounter2)
   for (let key in frequencyCounter1) {
     // loop through the first object
     if (!(key in frequencyCounter2)) {
@@ -30,4 +32,29 @@ function validAnagram(str1, str2) {
   return true // if the loop finishes, return true
 }
 
-module.exports = validAnagram
+function validAnagramRefactored(str1, str2) {
+  if (str1.length !== str2.length) {
+    // if the length of the strings are not the same,
+    return false // return false
+  }
+  const lookup = {} // create an empty object
+  for (let letter of str1) {
+    // loop through the first string
+    // if the letter exists, increment, otherwise set to 1
+    lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1)
+  }
+  console.log(lookup)
+  for (let letter of str2) {
+    // loop through the second string
+    // if the letter is not in the object
+    if (!lookup[letter]) {
+      return false // return false
+    } else {
+      lookup[letter] -= 1 // subtract 1 from the letter
+      console.log(lookup)
+    }
+  }
+  return true
+}
+
+module.exports = { validAnagram, validAnagramRefactored }
